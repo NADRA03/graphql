@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+    max-width: 1280px;
+}
+
+.logo {
+    margin-right: 40px;
+    font-weight: bold;
+    font-size: 24px;
+}
+  
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .login-box:hover {
+    transform: translateY(-2px);
+  }
+
+  .login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: black;
+    font-family: 'Gochi Hand', sans-serif;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .login-form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    font-family: 'Gochi Hand', sans-serif;
+    border-radius: 4px;
+        font-size: 15px;
+  }
+  
+  .login-form button {
+    padding: 0.75rem;
+    font-family: 'Gochi Hand', sans-serif;
+    background-color: #FF90BB;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /* .login-form button:hover {
+    background-color: #0056b3;
+  } */
+
+  body {
+    font-family: 'Gochi Hand', sans-serif;
+    font-weight: 300;
+    color: var(--neutral);
+  }
+
+
+
+
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+
+
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.typewriter-animation {
+    
+  animation: 
+  
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 50%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+} */
+
+
+
+.toast-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000000;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 9999;
+  font-family: 'Gochi Hand', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toast-message.show {
+  opacity: 1;
+}
+
+h2 {
+  font-family: 'Gochi Hand', cursive;
+  text-align: left;
+  line-height: 1.2;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    #e1fffe 50%,
+    #b0f8ff 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: animatedBackground 1s ease-out 0.2s forwards;
+  font-size: 20px; 
+  font-weight: bolder;
+}
+
+@keyframes animatedBackground {
+  to {
+    background-size: 100% 100%;
+  }
+}

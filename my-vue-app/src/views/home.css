@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F8E1;
+    color: black;
+    padding: 1rem 2rem;
+    font-family: 'Gochi Hand', sans-serif;
+    font-size: 30px;
+    margin-bottom: 100px;
+    font-weight: bolder;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logout {
+    margin-top: 20px;
+    color: red;
+        font-weight: bolder;
+        font-size: 20px;
+  }
+
+  .warning {
+    margin-left: 17%;
+    align-items: center;
+    margin-top: 10px;
+    width: 120px;
+    color: red;
+        font-weight: bolder;
+        font-size: 20px;
+  }
+  
+  .user-menu {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  
+  .user-menu:hover .user-dropdown {
+    display: block;
+  }
+
+
+
+
+
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    font-family: 'Gochi Hand';
+    font-size: 20px;
+}
+
+.first  {
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.second {
+    width: 90%;
+}
+
+.container {
+display: flex;                
+flex-direction: column; 
+align-items: center;
+min-height: 100%;
+flex: 1;
+
+justify-content: center; 
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-2px);
+  }
+
+
+
+  
+  .project-chart,
+  .skill-chart {
+    width: 45%;
+    height: auto;
+    font-family: 'Gochi Hand';
+/* background-color: rgba(248, 248, 225, 0.5) */
+    transition: transform 0.3s ease;
+  }
+  
+  .project-chart:hover {
+    transform: translateY(-2px);
+  }
+
+    .skill-chart:hover {
+    transform: translateY(-2px);
+  }
+
+
+  
+  .project-chart-grid {
+    stroke: #FF90BB;
+    stroke-width: 1;
+  }
+  
+  .project-line {
+    fill: none;
+    stroke: #FF90BB;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 1.8s ease-out forwards;
+  }
+  
+  .project-chart circle {
+    fill: #FF90BB;
+    r: 5;
+  }
+  
+  .project-chart text,
+  .skill-chart text {
+    fill: black;
+    font-size: 20px;
+    pointer-events: none;
+  }
+  
+
+  .skill-bar {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: growBar 1s ease-out forwards;
+  }
+  
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes growBar {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+
+
+
+
+
+
+.donut-arc {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+  
+  @keyframes drawDonut {
+    to {
+      stroke-dasharray: var(--dash, 0) 502;
+    }
+} 
+
+h2 {
+  font-family: 'Gochi Hand', cursive;
+  text-align: left;
+  line-height: 1.2;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    #e1fffe 50%,
+    #b0f8ff 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: animatedBackground 1s ease-out 0.2s forwards;
+  font-size: 20px; 
+  font-weight: bolder;
+}
+
+@keyframes animatedBackground {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
