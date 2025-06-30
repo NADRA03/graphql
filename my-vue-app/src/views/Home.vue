@@ -207,7 +207,7 @@ import { handleLogout } from './Home'
 
 const logout = handleLogout()
 
-const barColors = ['#FF90BB', '#8ACCD5', '#F8F8E1']
+const barColors = ['#8ACCD5', '#FFC1DA','#FF90BB']
 
 const {
   data,

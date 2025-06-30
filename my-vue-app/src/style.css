@@ -87,3 +87,7 @@ button:focus-visible {
   text-align: center;
       font-family: "Inconsolata", sans-serif;
 }
+
+body{
+    background-color: #F8F8E1;
+}
