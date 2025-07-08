@@ -284,7 +284,6 @@ const {
   data,
   pass, fail, dashOffset,
   animatedXp,
-  skillBarWidth,
   projX, projY, projectPoints
 } = useHome()
 
