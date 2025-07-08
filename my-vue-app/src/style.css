@@ -88,6 +88,39 @@ button:focus-visible {
       font-family: "Inconsolata", sans-serif;
 }
 
-body{
-    background-color: #F8F8E1;
+body {
+  background-color: #F8F8E1;
+  margin: 0;
+}
+
+#ice-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.ice {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(ellipse at center, #e0f7ff 0%, #a0d8ef 70%, transparent 100%);
+  opacity: 0.9;
+  border-radius: 50%;
+  animation: fall linear infinite;
+  box-shadow: 0 0 6px #a0d8ef;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }

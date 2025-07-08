@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-// No logic needed for now
 </script>
 
 <style scoped src="./home.css" />

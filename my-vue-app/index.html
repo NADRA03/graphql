@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
     <title>Vite + Vue + TS</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <div id="ice-container"></div>
   </body>
+<script>
+  const container = document.getElementById('ice-container');
+  console.log("Ice container:", container); // Check if found
+
+  function createIce() {
+    const ice = document.createElement('div');
+    ice.classList.add('ice');
+    ice.style.left = Math.random() * window.innerWidth + 'px';
+    ice.style.animationDuration = 2 + Math.random() * 3 + 's';
+    ice.style.width = ice.style.height = (5 + Math.random() * 10) + 'px';
+    container.appendChild(ice);
+    console.log("Ice created");
+
+    setTimeout(() => {
+      container.removeChild(ice);
+    }, 5000);
+  }
+
+  setInterval(createIce, 100);
+</script>
 </html>

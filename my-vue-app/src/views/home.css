@@ -92,7 +92,7 @@ justify-content: center;
   }
   
   .container:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
 
@@ -100,31 +100,34 @@ justify-content: center;
   
   .project-chart,
   .skill-chart {
-    width: 45%;
+    width: 100%;
     height: auto;
     font-family: 'Gochi Hand';
-/* background-color: rgba(248, 248, 225, 0.5) */
     transition: transform 0.3s ease;
+  }
+
+  .project-chart {
+    z-index: 100;
   }
   
   .project-chart:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
     .skill-chart:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
 
   
   .project-chart-grid {
-    stroke: #FF90BB;
+    stroke: #FFC1DA;
     stroke-width: 1;
   }
   
   .project-line {
     fill: none;
-    stroke: #FF90BB;
+    stroke: #FFC1DA;
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -171,6 +174,7 @@ justify-content: center;
 
 
 .donut-arc {
+  border-color: black;
   transform: rotate(-90deg);
   transform-origin: center;
   transition: stroke-dashoffset 1.2s ease-out;
