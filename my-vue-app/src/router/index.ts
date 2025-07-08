@@ -16,6 +16,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  from
   if (to.path === '/login') {
     localStorage.removeItem('authToken')
   }
