@@ -14,8 +14,9 @@
 
 <script setup lang="ts">
 import { useLogin } from './Login'
-
 const { username, password, handleSubmit } = useLogin()
+
+localStorage.removeItem("authToken")
 </script>
 
 <style scoped src="./login.css" />

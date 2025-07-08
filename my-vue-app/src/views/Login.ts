@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 import { login } from '../api/auth'
 import { showToast } from './toast.ts'
 import "./login.css"; 
+import { onMounted } from 'vue';
 
 export function useLogin() {
   const username = ref('')
@@ -25,3 +26,7 @@ export function useLogin() {
     handleSubmit
   }
 }
+
+onMounted(() => {
+  localStorage.removeItem("authToken")
+})
