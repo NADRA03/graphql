@@ -3,10 +3,10 @@ import { fetchUserData } from '../api/QLQueries'
 import type { UserData } from '../api/QLQueries'
 import { showToast } from './toast'
 import { useRouter } from 'vue-router'
+import router from "../router/index"
 
 
 export function useHome() {
-const router = useRouter()
 const data = reactive<UserData>({
   id: 0,
   firstName: '',
@@ -62,7 +62,7 @@ const data = reactive<UserData>({
     if (!token) {
     console.warn("Unauthorized: No token found")
     localStorage.setItem("errorCode", "401")
-    router.push("/login")
+    await router.push("/login")
     return
     }
     const res = await fetchUserData(token)

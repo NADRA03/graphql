@@ -288,12 +288,10 @@ const {
   projX, projY, projectPoints
 } = useHome()
 
-// Spider chart setup
 const count = computed(() => data.skills.length)
 const maxRadius = 150
 const angleStep = computed(() => 360 / count.value)
 
-// Target final points
 const points = computed(() =>
   data.skills.map((skill, i) => {
     const angleDeg = i * angleStep.value - 90
@@ -306,7 +304,6 @@ const points = computed(() =>
   })
 )
 
-// Animated points
 const animatedPoints = ref<Array<{ x: number; y: number }>>([])
 
 watchEffect(() => {
@@ -326,7 +323,7 @@ watchEffect(() => {
   requestAnimationFrame(animate)
 })
 
-// For polygon path
+
 const skillPoints = computed(() =>
   animatedPoints.value.map(p => `${p.x},${p.y}`).join(' ')
 )
