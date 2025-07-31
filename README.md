@@ -41,8 +41,8 @@ npm run dev
 ### Login Page
 ![Login](./readme/login.png)
 
-### Profile Overview
-![Profile](./readme/home.png)
+### Home Overview
+![Home](./readme/home.png)
 
 ## Author
 
